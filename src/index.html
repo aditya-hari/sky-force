@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Air Raid</title>
+    <style>
+        .center {
+            z-index: -1;
+            margin: auto;
+            width: 50%;
+        }
+        input[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            pointer-events:none;
+        }
+        .hud {
+            position:fixed;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            width: 20%;
+            height: auto;
+        }
+        .gameover {
+            background-color: rgb(195, 118, 133);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            height: 100%;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            z-index: 1;
+            visibility: hidden;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <script src="./THREEx.WindowResize.js"></script>
+    <script src="./THREEx.KeyboardState.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="main" class="center"> </div>
+    <div id="hud" class="hud">
+        <label for="Score">Score</label> 
+        <input type="text" id="score" name="score"> <br>
+        <label for="lname">Health</label>
+        <input type="text" id="health" name="health"> <br> 
+        <br> <br> <br> <br>
+        Controls <br> 
+        Control plane - Cursor keys <br> 
+        Shoot missile - Mouse click <br> 
+        Roll - A and D 
+        <br> <br> 
+        If an enemy hits you, you lose a life and points. You have 5 lives <br>
+        Hit enemies with your missile to gain points. But don't miss, you need points for shooting!  <br> 
+        Collect stars to gain points! <br> 
+    </div>
+    <div class="gameover" id="gameover"> YOU LOST </div> 
+</body>
+</html>
